@@ -14,8 +14,12 @@ class LoginFragment : BaseFragment(), LoginScreen {
     override val layout = R.layout.fragment_login
 
     override fun login() {
-        val navId = arguments?.getInt(NAVIGATION_KEY) ?: R.id.action_login_to_dashboard
-        findNavController().navigate(navId)
+        val navIdFromArguments = arguments?.getInt(NAVIGATION_KEY)
+        if (navIdFromArguments != null) {
+            findNavController().popBackStack(navIdFromArguments, false)
+        } else {
+            findNavController().navigate(R.id.action_login_to_dashboard)
+        }
     }
 
     override fun showError() {
