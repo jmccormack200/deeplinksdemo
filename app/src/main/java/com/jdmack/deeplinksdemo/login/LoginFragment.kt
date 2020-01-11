@@ -6,6 +6,7 @@ import android.view.View.VISIBLE
 import androidx.navigation.fragment.findNavController
 import com.jdmack.deeplinksdemo.R
 import com.jdmack.deeplinksdemo.base.BaseFragment
+import com.jdmack.deeplinksdemo.base.NAVIGATION_KEY
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : BaseFragment(), LoginScreen {
@@ -13,7 +14,8 @@ class LoginFragment : BaseFragment(), LoginScreen {
     override val layout = R.layout.fragment_login
 
     override fun login() {
-        findNavController().navigate(R.id.action_login_to_dashboard)
+        val navId = arguments?.getInt(NAVIGATION_KEY) ?: R.id.action_login_to_dashboard
+        findNavController().navigate(navId)
     }
 
     override fun showError() {

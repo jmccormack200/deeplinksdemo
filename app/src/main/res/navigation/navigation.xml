@@ -39,8 +39,12 @@
         android:id="@+id/screen_1_fragment"
         android:name="com.jdmack.deeplinksdemo.subscreens.Screen1Fragment"
         android:label="Screen1Fragment"
-        tools:layout="@layout/fragment_screen2"
-        />
+        tools:layout="@layout/fragment_screen1"
+        >
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="www.jdmccormack.com/screen1" />
+    </fragment>
     <fragment
         android:id="@+id/screen_2_fragment"
         android:name="com.jdmack.deeplinksdemo.subscreens.Screen2Fragment"
