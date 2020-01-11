@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/login_fragment">
-
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.jdmack.deeplinksdemo.login.LoginFragment"
@@ -13,48 +12,52 @@
         >
         <action
             android:id="@+id/action_login_to_dashboard"
-            app:destination="@id/dashboard_fragment"
+            app:destination="@id/dashboard_navigation"
             />
     </fragment>
-    <fragment
-        android:id="@+id/dashboard_fragment"
-        android:name="com.jdmack.deeplinksdemo.dashboard.DashboardFragment"
-        android:label="DashboardFragment"
-        tools:layout="@layout/fragment_dashboard"
-        >
-        <action
-            android:id="@+id/action_dashboard_to_screen1"
-            app:destination="@+id/screen_1_fragment"
+    <navigation
+        android:id="@+id/dashboard_navigation"
+        app:startDestination="@id/dashboard_fragment">
+        <fragment
+            android:id="@+id/dashboard_fragment"
+            android:name="com.jdmack.deeplinksdemo.dashboard.DashboardFragment"
+            android:label="DashboardFragment"
+            tools:layout="@layout/fragment_dashboard"
+            >
+            <action
+                android:id="@+id/action_dashboard_to_screen1"
+                app:destination="@+id/screen_1_fragment"
+                />
+            <action
+                android:id="@+id/action_dashboard_to_screen2"
+                app:destination="@+id/screen_2_fragment"
+                />
+            <action
+                android:id="@+id/action_dashboard_to_screen3"
+                app:destination="@+id/screen_3_fragment"
+                />
+        </fragment>
+        <fragment
+            android:id="@+id/screen_1_fragment"
+            android:name="com.jdmack.deeplinksdemo.subscreens.Screen1Fragment"
+            android:label="Screen1Fragment"
+            tools:layout="@layout/fragment_screen1"
+            >
+            <deepLink
+                android:id="@+id/deepLink"
+                app:uri="www.jdmccormack.com/screen1" />
+        </fragment>
+        <fragment
+            android:id="@+id/screen_2_fragment"
+            android:name="com.jdmack.deeplinksdemo.subscreens.Screen2Fragment"
+            android:label="Screen2Fragment"
+            tools:layout="@layout/fragment_screen2"
             />
-        <action
-            android:id="@+id/action_dashboard_to_screen2"
-            app:destination="@+id/screen_2_fragment"
+        <fragment
+            android:id="@+id/screen_3_fragment"
+            android:name="com.jdmack.deeplinksdemo.subscreens.Screen3Fragment"
+            android:label="Screen3Fragment"
+            tools:layout="@layout/fragment_screen3"
             />
-        <action
-            android:id="@+id/action_dashboard_to_screen3"
-            app:destination="@+id/screen_3_fragment"
-            />
-    </fragment>
-    <fragment
-        android:id="@+id/screen_1_fragment"
-        android:name="com.jdmack.deeplinksdemo.subscreens.Screen1Fragment"
-        android:label="Screen1Fragment"
-        tools:layout="@layout/fragment_screen1"
-        >
-        <deepLink
-            android:id="@+id/deepLink"
-            app:uri="www.jdmccormack.com/screen1" />
-    </fragment>
-    <fragment
-        android:id="@+id/screen_2_fragment"
-        android:name="com.jdmack.deeplinksdemo.subscreens.Screen2Fragment"
-        android:label="Screen2Fragment"
-        tools:layout="@layout/fragment_screen2"
-        />
-    <fragment
-        android:id="@+id/screen_3_fragment"
-        android:name="com.jdmack.deeplinksdemo.subscreens.Screen3Fragment"
-        android:label="Screen3Fragment"
-        tools:layout="@layout/fragment_screen3"
-        />
+    </navigation>
 </navigation>
