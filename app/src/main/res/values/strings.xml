@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">deeplinksdemo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="error_logging_in">Error Logging in, please try again</string>
+    <string name="welcome_message">Thank you for logging in, please select from the below options.</string>
+    <string name="screen_1">Screen 1</string>
+    <string name="screen_2">Screen 2</string>
+    <string name="screen_3">Screen 3</string>
+    <string name="login_welcome">Welcome! Please Login</string>
 </resources>

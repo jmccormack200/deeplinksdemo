@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,34 +7,36 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Thank you for logging in, please select from the below options."
+        android:text="@string/welcome_message"
         android:textSize="24sp"
         android:gravity="center"
         android:layout_marginBottom="24dp"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
+        android:id="@+id/screenOneButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
-        android:text="Screen 1"
+        android:text="@string/screen_1"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
+        android:id="@+id/screenTwoButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
-        android:text="Screen 2"
+        android:text="@string/screen_2"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
+        android:id="@+id/screenThreeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
-        android:text="Screen 3"
+        android:text="@string/screen_3"
         />
-
 </LinearLayout>
